@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Portfolio_design.css"> <!-- Linking External CSS -->
     <style>
      
@@ -32,9 +33,49 @@
         <section id="about" class="content">
             <h2>About Me</h2>
             <p>Software Engineer | Developer | Tech Enthusiast</p>
+            <button onclick="window.location.href='files/my_resume.pdf'" class="download-btn">
+                <i class="fas fa-download"></i> Download My Resume
+            </button>
+            
+            
         </section>
 
     </div>
+
+
+    <section id="about" class="about-container">
+        <div class="about-content">
+            <!-- Profile Image -->
+            <img src="msc/pic.png" alt="Jovanie Charles Caballa" class="about-image">
+            
+            <!-- Text Content -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I’m <span>Jovanie Charles Caballa</span>, a dedicated <span>Computer Engineer</span> eager to learn, grow, and innovate in the ever-evolving tech industry.
+                </p>
+                <p>
+                    Passionate about working with diverse teams, I thrive in dynamic environments where I can contribute meaningfully while learning from others.
+                </p>
+                <p>Software Engineer | Developer | Tech Enthusiast</p>
+                <button onclick="window.location.href='msc/CV.pdf'" class="download-btn">
+                    <i class="fas fa-download"></i> Download My Resume
+                </button>
+                
+            </div>
+        </div>
+    
+        <!-- Capstone Video -->
+        <div class="video-container">
+            <video controls class="capstone-video">
+                <source src="msc/coffee.mp4" type="video/mp4">
+                
+            </video>
+            <h3>Capstone Project: AI-Based System</h3>
+        </div>
+    </section>
+    
+<hr>
 
     <div> <section id="projects" class="content">
         <section id="projects" class="content">
@@ -71,79 +112,7 @@
             </div>
         </section>
         
-        <style>
-            .projects-container {
-                display: flex;
-                gap: 20px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-        
-            .project-card {
-                width: 350px;
-                height: 250px;
-                background: linear-gradient(135deg, #003135, #964734);
-                border-radius: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 20px;
-                color: white;
-                font-family: Arial, sans-serif;
-                font-weight: bold;
-                box-shadow: 0px 10px 30px #0FA4AF;
-                transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-                animation: tilt-loop 3s infinite ease-in-out alternate;
-            }
-        
-            .project-card:hover {
-                transform: rotateY(10deg) scale(1.1);
-                box-shadow: 0px 20px 50px#964734;
-                animation: tilt-hover 0.5s ease-in-out alternate;
-            }
     
-            .project-card p{
-                font-size: 14px;
-                text-align: justify
-            }
-            .card-content {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                align-items: center;
-            }
-        
-            .project-card a {
-                text-decoration: none;
-                color: #ffdd57;
-                font-weight: bold;
-                transition: 0.3s;
-            }
-        
-            .project-card a:hover {
-                color: #ffffff;
-            }
-        
-            .project-image {
-                width: 100%;
-                max-height: 120px;
-                border-radius: 10px;
-                object-fit: cover;
-            }
-        
-            @keyframes tilt-hover {
-                0% { transform: rotateY(-10deg) scale(1.1); }
-                100% { transform: rotateY(10deg) scale(1.1); }
-            }
-        
-            @keyframes tilt-loop {
-                0% { transform: rotateY(-5deg); }
-                100% { transform: rotateY(5deg); }
-            }
-        </style>
-        
-        
         
 </div>
     
