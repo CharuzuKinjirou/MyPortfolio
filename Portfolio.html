@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio_design.css"> <!-- Linking External CSS -->
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="oxanium-font">My Portfolio</div>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Merged Home & About Section -->
+<section id="about" class="content active">
+    <!-- Video Inside Portfolio Container -->
+    <div class="portfolio-container">
+        <video autoplay loop muted>
+            <source src="msc/building.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- About Content -->
+        <div class="about-content">
+        <img src="./msc/my picture.jpg" alt="Jovanie Charles Caballa" class="about-image">
+        <h2>About Me </h2>
+        <p>Jovanie Charles Caballa</p>
+        <p>Email: <a href="mailto:CharuzuKinjirou@gmail.com">CharuzuKinjirou@gmail.com</a></p>
+        <p>Phone: <a href="tel:+639659324391">+639659324391</a></p>
+        </div>
+        
+        </div>
+</section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="content">
+        <h2>Projects</h2>
+        <div class="slider">
+            <img src="./msc/CS1.png" class="active" alt="Project 1">
+            <img src="./msc/Song1.png" alt="Project 2">
+            <img src="./msc/NS1.png" alt="Project 3">
+        </div>
+        <ul>
+            <li><a href="https://www.example.com/project1">Project 1</a></li>
+            <li><a href="https://www.example.com/project2">Project 2</a></li>       
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email or phone.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>@2025 Jovanie Charles</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jovaniecharlesc/" target="_blank">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://github.com/CharuzuKinjirou" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jovanie-charles-caballa/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
