@@ -5,86 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Portfolio_design.css"> <!-- Linking External CSS -->
+    <style>
+     
+    </style>
 </head>
-
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="oxanium-font">My Portfolio</div>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="nav-links">
-                <li><a href="#about" onclick="showSection('about')">About</a></li>
-                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
-                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Merged Home & About Section -->
-<section id="about" class="content active">
-    <!-- Video Inside Portfolio Container -->
-    <div class="portfolio-container">
-        <video autoplay loop muted>
-            <source src="msc/building.mp4" type="video/mp4">
-        </video>
+    <div class="navbar">
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about" onclick="navigateTo(0)">About</a></li>
+            <li><a href="#projects" onclick="navigateTo(1)">Projects</a></li>
+            <li><a href="#contact" onclick="navigateTo(2)">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" onclick="navigateTo(0); toggleMenu();">About</a>
+            <a href="#projects" onclick="navigateTo(1); toggleMenu();">Projects</a>
+            <a href="#contact" onclick="navigateTo(2); toggleMenu();">Contact</a>
+        </div>
     </div>
 
-    <!-- About Content -->
-        <div class="about-content">
-        <img src="./msc/my picture.jpg" alt="Jovanie Charles Caballa" class="about-image">
-        <h2>About Me </h2>
-        <p>Jovanie Charles Caballa</p>
-        <p>Email: <a href="mailto:CharuzuKinjirou@gmail.com">CharuzuKinjirou@gmail.com</a></p>
-        <p>Phone: <a href="tel:+639659324391">+639659324391</a></p>
-        </div>
+    <div class="main-content" id="mainContent">
+        <section id="about" class="content">
+            <h2>About Me</h2>
+            <p>Software Engineer | Developer | Tech Enthusiast</p>
+        </section>
+
+    </div>
+
+    <div> <section id="projects" class="content">
+        <section id="projects" class="content">
+            <h2>Projects</h2>
+            <p>Here are some of my featured projects:</p>
         
-        </div>
-</section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="content">
-        <h2>Projects</h2>
-        <div class="slider">
-            <img src="./msc/CS1.png" class="active" alt="Project 1">
-            <img src="./msc/Song1.png" alt="Project 2">
-            <img src="./msc/NS1.png" alt="Project 3">
-        </div>
-        <ul>
-            <li><a href="https://www.example.com/project1">Project 1</a></li>
-            <li><a href="https://www.example.com/project2">Project 2</a></li>       
-        </ul>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="card-content">
+                        <img src="msc/CS1.png" alt="Portfolio Website" class="project-image">
+                        <h3>CraveSeekers</h3>
+                        <p>An online restaurant ordering system where users can browse the menu, place orders, and receive a receipt for payment upon pickup.</p>
+                        <a href="https://github.com/CharuzuKinjirou/CraveSeekers" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+        
+                <div class="project-card">
+                    <div class="card-content">
+                        <img src="msc/Song1.png" alt="AI Chatbot" class="project-image">
+                        <h3>SongScout</h3>
+                        <p>A music data tool for retrieving data from Spotify including streams for analytics.</p>
+                        <a href="https://github.com/CharuzuKinjirou/SongScout" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+        
+                <div class="project-card">
+                    <div class="card-content">
+                        <img src="msc/NS1.png" alt="Game Development" class="project-image">
+                        <h3>Nature'sGreen</h3>
+                        <p>A plant catalog with user accounts, search, and a real-time calendar for tracking plant care.</p>
+                        <a href="https://github.com/CharuzuKinjirou/NaturesGreen" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            .projects-container {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        
+            .project-card {
+                width: 350px;
+                height: 250px;
+                background: linear-gradient(135deg, #003135, #964734);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+                color: white;
+                font-family: Arial, sans-serif;
+                font-weight: bold;
+                box-shadow: 0px 10px 30px #0FA4AF;
+                transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+                animation: tilt-loop 3s infinite ease-in-out alternate;
+            }
+        
+            .project-card:hover {
+                transform: rotateY(10deg) scale(1.1);
+                box-shadow: 0px 20px 50px#964734;
+                animation: tilt-hover 0.5s ease-in-out alternate;
+            }
+    
+            .project-card p{
+                font-size: 14px;
+                text-align: justify
+            }
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        
+            .project-card a {
+                text-decoration: none;
+                color: #ffdd57;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+        
+            .project-card a:hover {
+                color: #ffffff;
+            }
+        
+            .project-image {
+                width: 100%;
+                max-height: 120px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+        
+            @keyframes tilt-hover {
+                0% { transform: rotateY(-10deg) scale(1.1); }
+                100% { transform: rotateY(10deg) scale(1.1); }
+            }
+        
+            @keyframes tilt-loop {
+                0% { transform: rotateY(-5deg); }
+                100% { transform: rotateY(5deg); }
+            }
+        </style>
+        
+        
+        
+</div>
+    
+    <div> <section id="contact" class="content">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="content">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me via email or phone.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>@2025 Jovanie Charles</p>
-        <div class="social-icons">
-            <a href="https://www.facebook.com/jovaniecharlesc/" target="_blank">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://github.com/CharuzuKinjirou" target="_blank">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jovanie-charles-caballa/" target="_blank">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
+</div>
+    
+    
     <script src="script.js"></script>
+
     
 </body>
 </html>
